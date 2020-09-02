@@ -1,0 +1,22 @@
+{
+  "name": "nova-server",
+  "version": "1.0.0",
+  "description": "Backend for Nova",
+  "main": "index.ts",
+  "scripts": {
+    "build": "tsc",
+    "start-server": "ts-node-dev index.ts",
+    "test": "ts-node-dev test.ts",
+    "prod": "NODE_ENV=production node --max-old-space-size=2048 -- node_modules/.bin/ts-node index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node-dev": "^1.0.0-pre.42",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@types/node": "^14.6.3",
+    "express": "^4.17.1"
+  }
+}
