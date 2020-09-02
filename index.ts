@@ -3,10 +3,12 @@ import * as path from "path";
 
 const app = express();
 
-app.use(express.static('public'))
-
 app.get("/", (request, response) => {
     response.sendFile(path.join(__dirname, "./app.html"))
+})
+
+app.get("/test", (request, response) => {
+    response.send("Hello World")
 })
 
 app.listen({port: 5000, host: "0.0.0.0"}, () => {
